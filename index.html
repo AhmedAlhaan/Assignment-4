@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delicious Recipes - Spaghetti Carbonara</title>
+    <title>Delicious Recipes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f8f5e4;
+            background-color: #fdf3dc;
             margin: 0;
             padding: 0;
         }
         .header {
-            background-color: #ff6600;
+            background-color: #ff5722;
             color: white;
-            text-align: center;
             padding: 20px;
+            text-align: center;
             font-size: 24px;
             font-weight: bold;
         }
@@ -23,66 +23,98 @@
             width: 80%;
             margin: auto;
             padding: 20px;
+            background-color: #fff7e6;
         }
-        .recipe-title {
-            font-size: 22px;
-            font-weight: bold;
-        }
-        .recipe-img {
+        img {
             width: 100%;
             max-width: 400px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
         }
-        .ingredients, .steps, .nutrition {
+        h2 {
+            color: #d84315;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            padding: 5px 0;
+        }
+        .table-container {
             margin-top: 20px;
         }
-        .nutrition table {
+        table {
             width: 100%;
             border-collapse: collapse;
         }
-        .nutrition th, .nutrition td {
-            border: 1px solid black;
-            padding: 8px;
+        th, td {
+            border: 1px solid #d84315;
+            padding: 10px;
             text-align: left;
         }
-        .nutrition th {
-            background-color: #ff6600;
+        th {
+            background-color: #ff5722;
             color: white;
+        }
+        .form-container {
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e64a19;
         }
     </style>
 </head>
 <body>
-    <div class="header">Delicious Recipes</div>
-    <div class="container">
-        <h2 class="recipe-title">Recipe of the Day: Spaghetti Carbonara</h2>
-        <p>Spaghetti Carbonara is a classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.</p>
-        <img src="path_to_image.jpg" alt="Description of image">
 
-        <div class="ingredients">
-        <div class="ingredients">
-            <h3>Ingredients</h3>
-            <ul>
-                <li>200g spaghetti</li>
-                <li>100g pancetta</li>
-                <li>2 large eggs</li>
-                <li>50g Pecorino cheese</li>
-                <li>50g Parmesan</li>
-                <li>Black pepper</li>
-                <li>Salt</li>
-            </ul>
-        </div>
-        <div class="steps">
-            <h3>Steps to Prepare</h3>
-            <ol>
-                <li>Boil the spaghetti in salted water until al dente.</li>
-                <li>Fry the pancetta until crispy.</li>
-                <li>Beat the eggs and mix with grated cheeses.</li>
-                <li>Drain the spaghetti and mix with pancetta.</li>
-                <li>Remove from heat and stir in the egg and cheese mixture.</li>
-                <li>Season with black pepper and serve immediately.</li>
-            </ol>
-        </div>
-        <div class="nutrition">
-            <h3>Nutritional Information</h3>
+    <div class="header">Delicious Recipes</div>
+
+    <div class="container">
+        <h2>Recipe of the Day: Spaghetti Carbonara</h2>
+        <p>Spaghetti Carbonara is a classic Italian pasta dish made with eggs, cheese, pancetta, and pepper. It’s simple, delicious, and perfect for any occasion.</p>
+
+        <!-- Recipe Image -->
+        <img src="image.jpg" alt="Spaghetti Carbonara">
+
+        <h2>Ingredients</h2>
+        <ul>
+            <li>200g spaghetti</li>
+            <li>100g pancetta</li>
+            <li>2 large eggs</li>
+            <li>50g Pecorino cheese</li>
+            <li>50g Parmesan</li>
+            <li>Black pepper</li>
+            <li>Salt</li>
+        </ul>
+
+        <h2>Steps to Prepare</h2>
+        <ul>
+            <li>Boil the spaghetti in salted water until al dente.</li>
+            <li>Fry the pancetta until crispy.</li>
+            <li>Beat the eggs and mix with grated cheeses.</li>
+            <li>Drain the spaghetti and mix with pancetta.</li>
+            <li>Remove from heat and stir in the egg and cheese mixture.</li>
+            <li>Season with black pepper and serve immediately.</li>
+        </ul>
+
+        <div class="table-container">
+            <h2>Nutritional Information</h2>
             <table>
                 <tr>
                     <th>Nutrient</th>
@@ -106,18 +138,26 @@
                 </tr>
             </table>
         </div>
-        <h3>Cooking Tutorial Video</h3>
+
+        <h2>Cooking Tutorial Video</h2>
         <iframe width="100%" height="315" src="https://www.youtube.com/embed/3AAdKl1UYZs" frameborder="0" allowfullscreen></iframe>
-        <h3>Submit Your Recipe</h3>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="recipe">Your Recipe:</label><br>
-            <textarea id="recipe" name="recipe"></textarea><br>
-            <input type="submit" value="Submit">
-        </form>
+
+        <div class="form-container">
+            <h2>Submit Your Recipe</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="recipe">Your Recipe:</label>
+                <textarea id="recipe" name="recipe" rows="4" required></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
+
 </body>
 </html>
